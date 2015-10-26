@@ -1,0 +1,39 @@
+name: AdvancedParkour
+version: 1.0.0
+api: [1.12.0]
+author: DRedDog
+main: AdvancedParkour\Main
+commands:
+    ap:
+        description: "View parkour commands"
+        usage: "/ap <start|leave|reset|create> [course]"
+        permission: "mylock.mylock"
+permissions:
+    ap:
+        default: op
+        description: "Access to all parkour commands."
+        children:
+            ap.start:
+                default: true
+                description: "Start parkour"
+            ap.leave:
+                default: true
+                description: "Leave parkour"
+            ap.reset:
+                default: true
+                description: "Reset current run"
+            ap.create:
+                default: op
+                description: "Remove player access to chest"
+            ap.setstart:
+                default: op
+                description: "Set start position"
+            ap.settimer:
+                default: op
+                description: "Set timer block"
+            ap.setend:
+                default: op
+                description: "Set end position"
+            ap.setcheckpoint:
+                default: op
+                description: "Set checkpoint"
